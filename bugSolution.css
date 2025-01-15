@@ -1,0 +1,22 @@
+/* Corrected CSS using calc() */
+
+/* Ensure the parent has a defined width before using calc() to calculate the child width */
+.parent {
+  width: 500px; /* Define width */
+}
+.child {
+  width: calc(100% - 10px);
+}
+
+/* Correct operator precedence using parentheses */
+.element {
+  width: calc((100px + 20px) / 2);
+}
+
+/* Maintain consistent units or use explicit conversions */
+.anotherElement {
+  width: calc(50% + 20px); /* Consistent with percentages */
+}
+.yetAnotherElement {
+  width: calc(50% + 2em); /* Could cause unpredictable results */
+} /* Convert 'em' to 'px' or vice versa for consistency*/
